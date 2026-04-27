@@ -1,0 +1,16 @@
+# Learning-lab Codex config notes.
+# This file is intentionally lightweight and safe for a training workspace.
+
+[lab]
+name = "codex-learning-lab"
+goal = "Practice safe, reviewable Codex workflows in small Python projects"
+
+[habits]
+plan_for_ambiguous_tasks = true
+prefer_minimal_changes = true
+review_diffs = true
+keep_permissions_conservative = true
+
+[notes]
+default_test_command = "python -m unittest discover -s tests"
+preferred_edit_style = "small, explicit, and easy to review"

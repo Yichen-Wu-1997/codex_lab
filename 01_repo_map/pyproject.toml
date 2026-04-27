@@ -1,0 +1,5 @@
+[project]
+name = "repo-map-lab"
+version = "0.1.0"
+description = "Read-only repo understanding practice for Codex"
+requires-python = ">=3.10"

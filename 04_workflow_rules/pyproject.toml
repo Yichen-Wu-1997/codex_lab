@@ -1,0 +1,5 @@
+[project]
+name = "workflow-rules-lab"
+version = "0.1.0"
+description = "Workflow and repo-guidance practice for Codex"
+requires-python = ">=3.10"

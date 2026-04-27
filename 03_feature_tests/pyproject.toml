@@ -1,0 +1,5 @@
+[project]
+name = "feature-tests-lab"
+version = "0.1.0"
+description = "Small feature practice with tests first"
+requires-python = ">=3.10"
