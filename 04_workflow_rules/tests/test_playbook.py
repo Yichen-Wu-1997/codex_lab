@@ -13,6 +13,11 @@ class PlaybookTests(unittest.TestCase):
         self.assertIn("Read the failing test first.", steps)
         self.assertIn("Rerun tests and inspect the diff.", steps)
 
+    def test_docs_steps_focus_on_guidance_and_explanation(self) -> None:
+        steps = review_steps("docs")
+        self.assertIn("Read the relevant guidance before editing.", steps)
+        self.assertIn("Explain what changed and what you verified.", steps)
+
     def test_feature_steps_include_tests_first(self) -> None:
         steps = review_steps("feature")
         self.assertIn("Add tests for the new behavior first.", steps)

@@ -10,6 +10,11 @@ def review_steps(task_kind: str) -> list[str]:
             "Add tests for the new behavior first.",
             "Implement only what the tests require.",
         ],
+        "docs": [
+            "Read the relevant guidance before editing.",
+            "Keep the change small and easy to review.",
+            "Explain what changed and what you verified.",
+        ],
     }
 
     try:
