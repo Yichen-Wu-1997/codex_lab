@@ -15,5 +15,14 @@ class ReadingList:
     def unread_titles(self) -> list[str]:
         return [str(book["title"]) for book in self._books if not book["read"]]
 
+    # Change: added title search for the feature tests task.
+    def search_titles(self, keyword: str) -> list[str]:
+        keyword_lower = keyword.lower()
+        return [
+            str(book["title"])
+            for book in self._books
+            if keyword_lower in str(book["title"]).lower()
+        ]
+
     def total_books(self) -> int:
         return len(self._books)
