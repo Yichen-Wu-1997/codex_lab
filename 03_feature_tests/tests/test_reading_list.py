@@ -27,6 +27,24 @@ class ReadingListTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             reading_list.mark_read("Missing Book")
 
+    # Change: tests for the new search_titles feature.
+    def test_search_titles_is_case_insensitive_and_preserves_order(self) -> None:
+        reading_list = ReadingList()
+        reading_list.add_book("Clean Code", "Robert C. Martin")
+        reading_list.add_book("The Pragmatic Programmer", "Andrew Hunt")
+        reading_list.add_book("Code Complete", "Steve McConnell")
+
+        self.assertEqual(
+            ["Clean Code", "Code Complete"],
+            reading_list.search_titles("CoDe"),
+        )
+
+    def test_search_titles_returns_empty_list_when_nothing_matches(self) -> None:
+        reading_list = ReadingList()
+        reading_list.add_book("Deep Work", "Cal Newport")
+
+        self.assertEqual([], reading_list.search_titles("python"))
+
 
 if __name__ == "__main__":
     unittest.main()
