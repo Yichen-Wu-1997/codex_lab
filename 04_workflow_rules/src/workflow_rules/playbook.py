@@ -10,6 +10,11 @@ def review_steps(task_kind: str) -> list[str]:
             "Add tests for the new behavior first.",
             "Implement only what the tests require.",
         ],
+        "manually introduce a conflict here": [
+            "Read the existing code and tests.",
+            "Add tests for the new behavior first.",
+            "Implement only what the tests require.",
+        ],
     }
 
     try:
