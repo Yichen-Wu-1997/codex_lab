@@ -5,4 +5,5 @@ def can_book_room(attendees: int, capacity: int, allow_standing: bool = False) -
         raise ValueError("capacity must be positive")
 
     limit = capacity + 2 if allow_standing else capacity
-    return attendees < limit
+    # Allow bookings that are exactly at the computed limit.
+    return attendees <= limit
